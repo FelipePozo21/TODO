@@ -22,6 +22,9 @@ module.exports = {
         animation: {
           "fade-in-down": "fade-in-down 0.6s ease-in-out"
         },
+        gridTemplateRows: {
+          'cards': '20% 60% 20%'
+        }
     },
   },
   plugins: [],
