@@ -32,16 +32,17 @@ async function createCard(data) {
     
     let interval = setInterval( async() => {
         let test = await getCountdownDate(dataToParse.date)
-        pDate.innerText = test
+        if(test) {
+            pDate.innerText = test
+        } else {
+            clearIntervalCard()
+        }
    }, SECOND)
+
+    function clearIntervalCard() {
+        pDate.innerText = 'Expired'
+        clearInterval(interval)
+    }
+
     articleList.append(div)
 }
-
-// async function updateDate(date) {
-//     console.log({
-//         updateDate:date
-//     })
-//     let callFunc = await getCountdownDate(date)
-//     // return callFunc
-//     console.log(callFunc)
-// }
