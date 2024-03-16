@@ -17,7 +17,7 @@ async function getCountdownDate(date) {
     
             return `${days}D:${hours}H:${minutes}M`
         } else {
-            return false
+            return 'Expired'
         }
     }
     return updateCountDown()

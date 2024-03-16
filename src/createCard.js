@@ -35,12 +35,12 @@ async function createCard(data) {
         if(test) {
             pDate.innerText = test
         } else {
+            pDate.innerText = test
             clearIntervalCard()
         }
    }, SECOND)
 
     function clearIntervalCard() {
-        pDate.innerText = 'Expired'
         clearInterval(interval)
     }
 
