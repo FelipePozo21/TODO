@@ -24,6 +24,7 @@ async function createCard(data) {
 
     span.addEventListener('click', () => {
         div.remove()
+        localStorage.removeItem(dataToParse.title)
         clearInterval(interval)
     })
 

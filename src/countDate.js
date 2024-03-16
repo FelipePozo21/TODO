@@ -6,7 +6,6 @@ const DAY = HOUR * 24
 
 async function getCountdownDate(date) {
     const dateTime = Date.parse(date)
-    console.log({dateTime: dateTime})
     function updateCountDown() {
         const actualTime = Date.now()
         const diff = dateTime - actualTime
